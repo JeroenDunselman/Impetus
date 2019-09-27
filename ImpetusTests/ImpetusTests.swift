@@ -10,7 +10,8 @@ import XCTest
 @testable import Impetus
 
 class ImpetusTests: XCTestCase {
-
+    let game = Game()
+    
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -18,17 +19,63 @@ class ImpetusTests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testConversionForStart() {
+        let result = game.play([])
+        XCTAssertEqual(result, "Love All", "Conversion for start is incorrect")
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func testConversionForOpponentScore() {
+        let result = game.play([1])
+        XCTAssertEqual(result, "Love Fifteen", "Conversion for OpponentScore is incorrect")
+    }
+    
+    func testConversionForPlayerScore() {
+        let result = game.play([0])
+        XCTAssertEqual(result, "Fifteen Love", "Conversion for PlayerScore is incorrect")
+    }
+    
+    func testConversionForSecondScoreEqual() {
+        let results = [game.play([0, 1]),
+                      game.play([1, 0])]
+        for result in results {
+            XCTAssertEqual(result, "Fifteen All", "Conversion for SecondScoreEqual is incorrect")
         }
     }
-
+    
+    func testConversionForSecondScoreUnequal() {
+        let results = [game.play([0, 0]),
+                       game.play([1, 1])]
+        
+        XCTAssertEqual(results[0], "Thirty Love", "Conversion for SecondScoreUnequal is incorrect")
+        XCTAssertEqual(results[1], "Love Thirty", "Conversion for SecondScoreUnequal is incorrect")
+    }
+    
+    func testConversionForThirdScore() {
+        let results = [game.play([0, 0, 0]),
+                       game.play([1, 1, 0]),
+                       game.play([1, 1, 1]),
+                       game.play([0, 0, 1])]
+        
+        
+        XCTAssertEqual(results[0], "Fourty Love", "Conversion for ThirdScore is incorrect")
+        XCTAssertEqual(results[1], "Fifteen Thirty", "Conversion for ThirdScore is incorrect")
+        XCTAssertEqual(results[2], "Love Fourty", "Conversion for ThirdScore is incorrect")
+        XCTAssertEqual(results[3], "Thirty Fifteen", "Conversion for ThirdScore is incorrect")
+    }
+    
+    func testConversionForFourthScore() {
+        let results = [game.play([1, 0, 0, 0]),
+                       game.play([1, 1, 0, 0]),
+                       game.play([1, 1, 1, 0]),
+                       game.play([1, 1, 1, 1])
+        ]
+        
+        XCTAssertEqual(results[0], "Fourty Fifteen", "Conversion for FourthScore is incorrect")
+        XCTAssertEqual(results[1], "Thirty All", "Conversion for FourthScore is incorrect")
+        XCTAssertEqual(results[2], "Fifteen Fourty", "Conversion for FourthScore is incorrect")
+//        XCTAssertEqual(results[3], "Game Over, Opponent won", "Conversion for FourthScore is incorrect")
+    }
+    
+    
 }
