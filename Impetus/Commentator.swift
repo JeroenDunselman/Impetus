@@ -21,6 +21,11 @@ struct ScoreKeeper {
         }
     }
     
+    func scoreResult() -> String {
+        
+        return ""
+    }
+    
     func commentPoint(winner: Int) {
         var comment = "Point scored by "
         comment += winner == 0 ? "Player" : "Opponent"
