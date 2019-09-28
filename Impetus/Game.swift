@@ -7,19 +7,28 @@
 //
 
 import Foundation
+import UIKit
 
-struct Game {
+class Game {
+    var scoreKeeper = ScoreKeeper()
+    
+    init () {
+       scoreKeeper = ScoreKeeper()
+    }
     
     func play(_ game: [Int]) -> String {
-        var scoreKeeper = ScoreKeeper()
-        
+        scoreKeeper = ScoreKeeper()
         for i in game {
             guard !scoreKeeper.gameOver else { return "Score rejected, game over"}
             scoreKeeper.score(i)
         }
         return scoreKeeper.scoreResult()
     }
-    
+
+    func score(_ player: Int) -> String { 
+        scoreKeeper.score(player)
+        return "scored"
+    }
 }
 
 struct ScoreKeeper {
