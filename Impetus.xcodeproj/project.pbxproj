@@ -13,7 +13,7 @@
 		A95C350D233E26F900523E51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A95C350C233E26F900523E51 /* Assets.xcassets */; };
 		A95C3510233E26F900523E51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A95C350E233E26F900523E51 /* LaunchScreen.storyboard */; };
 		A95C351B233E26F900523E51 /* ImpetusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95C351A233E26F900523E51 /* ImpetusTests.swift */; };
-		A95C3528233E298200523E51 /* Commentator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95C3527233E298200523E51 /* Commentator.swift */; };
+		A95C352A233F765500523E51 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95C3529233F765500523E51 /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,7 @@
 		A95C3516233E26F900523E51 /* ImpetusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImpetusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A95C351A233E26F900523E51 /* ImpetusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpetusTests.swift; sourceTree = "<group>"; };
 		A95C351C233E26F900523E51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A95C3527233E298200523E51 /* Commentator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commentator.swift; sourceTree = "<group>"; };
+		A95C3529233F765500523E51 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +85,7 @@
 				A95C350C233E26F900523E51 /* Assets.xcassets */,
 				A95C350E233E26F900523E51 /* LaunchScreen.storyboard */,
 				A95C3511233E26F900523E51 /* Info.plist */,
-				A95C3527233E298200523E51 /* Commentator.swift */,
+				A95C3529233F765500523E51 /* Game.swift */,
 			);
 			path = Impetus;
 			sourceTree = "<group>";
@@ -202,7 +202,7 @@
 			files = (
 				A95C3508233E26F200523E51 /* ViewController.swift in Sources */,
 				A95C3506233E26F200523E51 /* AppDelegate.swift in Sources */,
-				A95C3528233E298200523E51 /* Commentator.swift in Sources */,
+				A95C352A233F765500523E51 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

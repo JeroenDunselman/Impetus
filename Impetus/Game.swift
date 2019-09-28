@@ -1,12 +1,26 @@
 //
-//  Commentator.swift
+//  Game.swift
 //  Impetus
 //
-//  Created by Jeroen Dunselman on 27/09/2019.
+//  Created by Jeroen Dunselman on 28/09/2019.
 //  Copyright © 2019 Jeroen Dunselman. All rights reserved.
 //
 
 import Foundation
+
+struct Game {
+    
+    func play(_ game: [Int]) -> String {
+        var scoreKeeper = ScoreKeeper()
+        
+        for i in game {
+            guard !scoreKeeper.gameOver else { return "Score rejected, game over"}
+            scoreKeeper.score(i)
+        }
+        return scoreKeeper.scoreResult()
+    }
+    
+}
 
 struct ScoreKeeper {
     var gameOver = false
@@ -14,16 +28,11 @@ struct ScoreKeeper {
     let points = ["Love", "Fifteen", "Thirty", "Fourty", "n.a."]
     
     mutating func score(_ winner: Int) {
-        commentScore(by: winner)
         
         let increment = 1
-        if winner == 0 {
-            score.player += increment
-        } else {
-            score.opponent += increment
-        }
+        if winner == 0 {score.player += increment } else { score.opponent += increment }
         
-        //        ?GameOver
+        // GameOver?
         if score.opponent - score.player >= 2 && score.opponent >= 4 ||
             score.player - score.opponent >= 2 && score.player >= 4 {
             gameOver = true
@@ -33,9 +42,12 @@ struct ScoreKeeper {
     mutating func scoreResult() -> String {
         
         if score.opponent == score.player {
+            // Using "Deuce" for 40 and up
             if score.opponent >= 3 {
                 return "Deuce"
             }
+            
+            // Using "All" for equal lower score
             let participantsScore = points[score.player]
             return "\(participantsScore) All"
             
@@ -49,30 +61,11 @@ struct ScoreKeeper {
                 let result = "Deuce Advantage "
                 return result + (score.opponent > score.player ? "Opponent" : "Player")
             }
-
+            
             let player = points[score.player]
             let opponent = points[score.opponent]
             return "\(player) \(opponent)"
         }
-    }
-    
-    func commentScore(by: Int) {
-        var comment = "Point scored by "
-        comment += by == 0 ? "Player" : "Opponent"
-        print("\(comment)")
-    }
-}
-
-class Game {
-    
-    func play(_ game: [Int]) -> String {
-        var scoreKeeper = ScoreKeeper()
-        
-        for i in game {
-            guard !scoreKeeper.gameOver else { return "Score rejected, game over"}
-            scoreKeeper.score(i)
-        }
-        return scoreKeeper.scoreResult()
     }
     
 }
