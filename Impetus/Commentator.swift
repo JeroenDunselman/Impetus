@@ -9,77 +9,70 @@
 import Foundation
 
 struct ScoreKeeper {
-    var playerScoreCount = 0
-    var opponentScoreCount = 0
- 
+    var gameOver = false
+    var score:(player:Int, opponent:Int) = (0, 0)
+    let points = ["Love", "Fifteen", "Thirty", "Fourty", "n.a."]
+    
     mutating func score(_ winner: Int) {
-        commentPoint(winner: winner)
+        commentScore(by: winner)
+        
+        let increment = 1
         if winner == 0 {
-            playerScoreCount += 1
+            score.player += increment
         } else {
-            opponentScoreCount += 1
+            score.opponent += increment
+        }
+        
+        //        ?GameOver
+        if score.opponent - score.player >= 2 && score.opponent >= 4 ||
+            score.player - score.opponent >= 2 && score.player >= 4 {
+            gameOver = true
         }
     }
     
-    func scoreResult() -> String {
+    mutating func scoreResult() -> String {
         
-        return ""
+        if score.opponent == score.player {
+            if score.opponent >= 3 {
+                return "Deuce"
+            }
+            let participantsScore = points[score.player]
+            return "\(participantsScore) All"
+            
+        } else {
+            
+            if gameOver {
+                return "Game Over, \(score.opponent > score.player ? "Opponent" : "Player" ) won"
+            }
+            
+            if score.opponent >= 4 || score.player >= 4 {
+                let result = "Deuce Advantage "
+                return result + (score.opponent > score.player ? "Opponent" : "Player")
+            }
+
+            let player = points[score.player]
+            let opponent = points[score.opponent]
+            return "\(player) \(opponent)"
+        }
     }
     
-    func commentPoint(winner: Int) {
+    func commentScore(by: Int) {
         var comment = "Point scored by "
-        comment += winner == 0 ? "Player" : "Opponent"
+        comment += by == 0 ? "Player" : "Opponent"
+        print("\(comment)")
     }
-}
-
-struct Conversion {
-    let pointsDescriptions: [(points: Int, description: String)] =
-        [(0, "Love"),
-         (1, "Fifteen"),
-         (2, "Thirty"),
-         (3, "Fourty")]
 }
 
 class Game {
-    let conversion = Conversion()
+    
     func play(_ game: [Int]) -> String {
-        var result = "Love All"
         var scoreKeeper = ScoreKeeper()
         
         for i in game {
+            guard !scoreKeeper.gameOver else { return "Score rejected, game over"}
             scoreKeeper.score(i)
-            
-            result = "Fifteen"
-            if !(game.count > 1) {
-                result = game[0] == 0 ? result + " Love" : "Love " + result
-                
-            } else if !(game.count > 2) {
-                if scoreKeeper.opponentScoreCount == scoreKeeper.playerScoreCount {
-                    result = result + " All"
-                } else {
-                    result = "Thirty"
-                    if scoreKeeper.opponentScoreCount < scoreKeeper.playerScoreCount {
-                        result = result + " Love"
-                    } else {
-                        result = "Love " + result
-                    }
-                }
-                
-            } else { //if !(game.count > 3)
-                result = "Thirty"
-                if scoreKeeper.opponentScoreCount == scoreKeeper.playerScoreCount {
-                    result = result + " All"
-                } else {
-                    let player = conversion.pointsDescriptions[scoreKeeper.playerScoreCount].description
-                    let opponent = conversion.pointsDescriptions[scoreKeeper.opponentScoreCount].description
-                    result = "\(player) \(opponent)"
-                }
-            }
-            
         }
-        
-        return result
+        return scoreKeeper.scoreResult()
     }
-    
     
 }
