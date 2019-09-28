@@ -25,9 +25,12 @@ class Game {
         return scoreKeeper.scoreResult()
     }
 
-    func score(_ player: Int) -> String { 
+    func score(_ player: Int) { 
         scoreKeeper.score(player)
-        return "scored"
+    }
+    
+    func randomParticipantId() -> Int {
+        return arc4random_uniform(2) == 0 ? 0 : 1
     }
 }
 
@@ -63,7 +66,7 @@ struct ScoreKeeper {
         } else {
             
             if gameOver {
-                return "Game Over, \(score.opponent > score.player ? "Opponent" : "Player" ) won"
+                return "Game Over, \(score.opponent > score.player ? "Opponent" : "Player" ) won."
             }
             
             if score.opponent >= 4 || score.player >= 4 {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yzb-yt-dnU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Rules-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Impetus" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,23 +19,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="61N-ET-4a1">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d4K-S8-2Yl">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="323.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="299"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="l9x-Gp-N3m">
-                                                <rect key="frame" x="0.0" y="0.0" width="190" height="323.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="190" height="299"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sk-xH-Jqp" userLabel="Point for Player A">
-                                                        <rect key="frame" x="0.0" y="0.0" width="190" height="303"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="190" height="278.5"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                         <state key="normal" title="Point for Player"/>
                                                         <connections>
                                                             <action selector="scoreLeft:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vX7-5E-cHt"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgL-v9-HFW">
-                                                        <rect key="frame" x="0.0" y="303" width="190" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="278.5" width="190" height="20.5"/>
                                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -44,17 +46,19 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zjy-yd-fv3">
-                                                <rect key="frame" x="190" y="0.0" width="185" height="323.5"/>
+                                                <rect key="frame" x="190" y="0.0" width="185" height="299"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpL-4h-Adg">
-                                                        <rect key="frame" x="0.0" y="0.0" width="185" height="303"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="185" height="278.5"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                         <state key="normal" title="Point for Opponent"/>
                                                         <connections>
                                                             <action selector="scoreRight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rY0-cI-iOd"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gQ-9q-Fk5">
-                                                        <rect key="frame" x="0.0" y="303" width="185" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="278.5" width="185" height="20.5"/>
                                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -68,16 +72,16 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CdS-TA-tV4">
-                                        <rect key="frame" x="0.0" y="323.5" width="375" height="323.5"/>
+                                        <rect key="frame" x="0.0" y="299" width="375" height="299"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Love All" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qmm-ze-uPM">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="162"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQ1-XM-1rT">
-                                                <rect key="frame" x="0.0" y="162" width="375" height="161.5"/>
+                                                <rect key="frame" x="0.0" y="149.5" width="375" height="149.5"/>
                                                 <state key="normal" title="New Game"/>
                                                 <connections>
                                                     <action selector="newGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Izr-0t-E6O"/>
@@ -103,6 +107,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Rules" id="TFP-7d-wbL"/>
                     <connections>
                         <outlet property="currentScore" destination="Qmm-ze-uPM" id="cDX-fZ-Bdd"/>
                         <outlet property="scoreLeft" destination="kgL-v9-HFW" id="rVo-sA-zeX"/>
@@ -111,7 +116,126 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="690" y="171"/>
+            <point key="canvasLocation" x="2228" y="22.938530734632685"/>
+        </scene>
+        <!--Quizz-->
+        <scene sceneID="3w3-eY-lI2">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o2A-An-Ooe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="AnE-V5-o5I" customClass="GamerViewController" customModule="Impetus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jZB-n8-p8G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0JZ-BS-TXN">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4WR-SS-U5b">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="299"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="a5q-WY-uhN">
+                                                <rect key="frame" x="0.0" y="0.0" width="190" height="299"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayI-nc-HLe" userLabel="Point for Player A">
+                                                        <rect key="frame" x="0.0" y="0.0" width="190" height="299"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <state key="normal" title="Point for Player"/>
+                                                        <connections>
+                                                            <action selector="pickLeft:" destination="AnE-V5-o5I" eventType="touchUpInside" id="UO0-bw-eKI"/>
+                                                            <action selector="scoreLeft:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N7T-fK-cAg"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="z70-xM-zGK">
+                                                <rect key="frame" x="190" y="0.0" width="185" height="299"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2J3-1s-7CE">
+                                                        <rect key="frame" x="0.0" y="0.0" width="185" height="299"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <state key="normal" title="Point for Opponent"/>
+                                                        <connections>
+                                                            <action selector="pickRight:" destination="AnE-V5-o5I" eventType="touchUpInside" id="ITx-G0-ucJ"/>
+                                                            <action selector="scoreRight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nvk-31-P36"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="z70-xM-zGK" firstAttribute="leading" secondItem="4WR-SS-U5b" secondAttribute="leading" constant="190" id="20W-Km-lak"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Y2I-23-8Un">
+                                        <rect key="frame" x="0.0" y="299" width="375" height="299"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Love All" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7w-Da-a3K">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="139.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who scored a Point?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9S-pX-eXe">
+                                                <rect key="frame" x="0.0" y="139.5" width="375" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5z-8J-bE1">
+                                                <rect key="frame" x="0.0" y="160" width="375" height="139"/>
+                                                <state key="normal" title="New Game"/>
+                                                <connections>
+                                                    <action selector="newGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vfB-NV-cOh"/>
+                                                    <action selector="newGame:" destination="AnE-V5-o5I" eventType="touchUpInside" id="x9f-HQ-Ncx"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="e7w-Da-a3K" firstAttribute="height" secondItem="i5z-8J-bE1" secondAttribute="height" id="ZG7-Y2-Wkv"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Y2I-23-8Un" firstAttribute="height" secondItem="4WR-SS-U5b" secondAttribute="height" id="sSO-Sx-wZ7"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0JZ-BS-TXN" firstAttribute="top" secondItem="pZ7-KL-DZS" secondAttribute="top" id="TZo-cn-sjY"/>
+                            <constraint firstItem="pZ7-KL-DZS" firstAttribute="bottom" secondItem="0JZ-BS-TXN" secondAttribute="bottom" id="ZRQ-tq-EO0"/>
+                            <constraint firstItem="0JZ-BS-TXN" firstAttribute="leading" secondItem="pZ7-KL-DZS" secondAttribute="leading" id="apV-PZ-vJF"/>
+                            <constraint firstItem="pZ7-KL-DZS" firstAttribute="trailing" secondItem="0JZ-BS-TXN" secondAttribute="trailing" id="dFK-el-vof"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pZ7-KL-DZS"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Quizz" id="ZV0-A1-zBG"/>
+                    <connections>
+                        <outlet property="currentScore" destination="e7w-Da-a3K" id="8kd-L8-gWO"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2423" y="729"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="USh-B1-NlO">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="yzb-yt-dnU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YjK-0E-Uje">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="nbU-m4-IeY"/>
+                        <segue destination="AnE-V5-o5I" kind="relationship" relationship="viewControllers" id="MyM-Yd-auk"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pkW-rX-GS7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1585" y="374"/>
         </scene>
     </scenes>
 </document>

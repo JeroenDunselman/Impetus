@@ -81,7 +81,7 @@ class ImpetusTests: XCTestCase {
         XCTAssertEqual(game.play([0, 0, 1, 0, 1]), "Fourty Thirty", "Conversion for FifthScore is incorrect")
         XCTAssertEqual(game.play([1, 1, 0, 1, 0]), "Thirty Fourty", "Conversion for FifthScore is incorrect")
     }
-
+    
     func testDeuce() {
         XCTAssertEqual(game.play([1, 1, 1, 0, 0, 0]), "Deuce", "Conversion for testDeuce is incorrect")
         XCTAssertEqual(game.play([1, 0, 1, 0, 1, 0]), "Deuce", "Conversion for testDeuce is incorrect")
@@ -98,10 +98,10 @@ class ImpetusTests: XCTestCase {
     }
     
     func testConversionForGameOver() {
-        XCTAssertEqual(game.play([1, 1, 1, 1]), "Game Over, Opponent won", "Conversion for GameOver is incorrect")
-        XCTAssertEqual(game.play([0, 0, 0, 0]), "Game Over, Player won", "Conversion for GameOver is incorrect")
-        XCTAssertEqual(game.play([1, 1, 0, 1, 0, 1]), "Game Over, Opponent won", "Conversion for GameOver is incorrect")
-        XCTAssertEqual(game.play([0, 0, 1, 0, 1, 0]), "Game Over, Player won", "Conversion for GameOver is incorrect")
+        XCTAssertEqual(game.play([1, 1, 1, 1]), "Game Over, Opponent won.", "Conversion for GameOver is incorrect")
+        XCTAssertEqual(game.play([0, 0, 0, 0]), "Game Over, Player won.", "Conversion for GameOver is incorrect")
+        XCTAssertEqual(game.play([1, 1, 0, 1, 0, 1]), "Game Over, Opponent won.", "Conversion for GameOver is incorrect")
+        XCTAssertEqual(game.play([0, 0, 1, 0, 1, 0]), "Game Over, Player won.", "Conversion for GameOver is incorrect")
     }
     
     func testScoreRejected() {

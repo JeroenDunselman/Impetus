@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A94CE2DE233FAA80002536DA /* GamerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94CE2DD233FAA80002536DA /* GamerViewController.swift */; };
 		A95C3506233E26F200523E51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95C3505233E26F200523E51 /* AppDelegate.swift */; };
 		A95C3508233E26F200523E51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95C3507233E26F200523E51 /* ViewController.swift */; };
 		A95C350B233E26F200523E51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A95C3509233E26F200523E51 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A94CE2DD233FAA80002536DA /* GamerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamerViewController.swift; sourceTree = "<group>"; };
 		A95C3502233E26F200523E51 /* Impetus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Impetus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A95C3505233E26F200523E51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A95C3507233E26F200523E51 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			children = (
 				A95C3505233E26F200523E51 /* AppDelegate.swift */,
 				A95C3507233E26F200523E51 /* ViewController.swift */,
+				A94CE2DD233FAA80002536DA /* GamerViewController.swift */,
 				A95C3509233E26F200523E51 /* Main.storyboard */,
 				A95C350C233E26F900523E51 /* Assets.xcassets */,
 				A95C350E233E26F900523E51 /* LaunchScreen.storyboard */,
@@ -203,6 +206,7 @@
 				A95C3508233E26F200523E51 /* ViewController.swift in Sources */,
 				A95C3506233E26F200523E51 /* AppDelegate.swift in Sources */,
 				A95C352A233F765500523E51 /* Game.swift in Sources */,
+				A94CE2DE233FAA80002536DA /* GamerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
