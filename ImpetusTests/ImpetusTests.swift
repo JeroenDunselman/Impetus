@@ -108,5 +108,4 @@ class ImpetusTests: XCTestCase {
         XCTAssertEqual(game.play([1, 1, 0, 1, 1, 0]), "Score rejected, game over", "Conversion for ScoreRejected is incorrect")
     }
 
-    
 }
