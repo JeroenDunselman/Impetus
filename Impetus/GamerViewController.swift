@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class GamerViewController: UIViewController {
     var game = Game()
     var challenge = 0
