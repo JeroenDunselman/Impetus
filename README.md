@@ -1,7 +1,7 @@
 # Impetus is a test assignment for Avance. The assignment can be found here: http://codingdojo.org/kata/Tennis/. 
 The challenge is to convert scored points sequences to the right tennis game scores.
 
--master
+-multiInterface
 The app in the multiInterface branch has two tabs, for a Rules and for a Quiz game, which are based on the tennis score conversion logic. 
 Rules: Player can choose a game sequence and get the matching score.
 Quiz: Player is presented randomly advancing game scores and for each has to pick which tennis player scored last.
