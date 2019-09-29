@@ -1,4 +1,5 @@
-# Impetus is a test assignment for Avance. The assignment can be found here: http://codingdojo.org/kata/Tennis/. 
+# Impetus 
+Impetus is a test assignment iOS project for Avance. The assignment can be found here: http://codingdojo.org/kata/Tennis/. 
 The challenge is to convert scored points sequences to the right tennis game scores.
 
 -multiInterface
